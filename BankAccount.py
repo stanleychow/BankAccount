@@ -41,13 +41,33 @@ class BankAccount:
         pass
 
 
-kamiAccount = BankAccount('kami bigdely', '123', 'A1B1', 100000)
-kamiAccount.deposit(1000)
+stanleyAccount = BankAccount('Stanley Chow','83057123', 'A1B1', 5)
+johnAccount = BankAccount('John Doe', '13491124', 'A1B2', 10)
+bobAccount = BankAccount('Bob Johnson', '12345678', 'B5O1', 100)
 
-stanleyAccount = BankAccount('Stanley Chow','00000123', 'A1B1', 5)
-# stanleyAccount.deposit(1000)
-# stanleyAccount.withdraw(6)
+stanleyAccount.deposit(1000)
+stanleyAccount.withdraw(3)
+stanleyAccount.get_balance()
+stanleyAccount.add_interest()
 stanleyAccount.print_receipt()
+
+print("----------------")
+
+johnAccount.deposit(10)
+johnAccount.withdraw(1)
+johnAccount.get_balance()
+johnAccount.add_interest()
+johnAccount.print_receipt()
+
+print("----------------")
+
+bobAccount.deposit(50)
+bobAccount.withdraw(1000)
+bobAccount.get_balance()
+bobAccount.add_interest()
+bobAccount.print_receipt()
+
+
 
 
 
