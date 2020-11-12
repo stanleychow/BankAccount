@@ -1,11 +1,14 @@
+import random
 class BankAccount:
     '''This class simulates a bank account
     '''
-    def __init__(self, full_name, account_number, routing_number, balance):
+    def __init__(self, full_name):
         self.full_name = full_name
-        self.account_number = account_number
-        self.routing_number = routing_number
-        self.balance = balance
+        self.account_number = random.randint(100000000,999999999)
+        self.routing_number = 123456789
+        self.balance = 0
+    
+
 
     def deposit(self, amount):
         '''Adds 'amount' of money into balance
@@ -45,15 +48,15 @@ class BankAccount:
         '''Prints recept
         '''
         print(self.full_name)
-        print("Account No.: ****" + self.account_number[-4:])
-        print("Routing No.: " + self.routing_number)
+        print("Account No.: ****" + str(self.account_number)[-4:])
+        print("Routing No.: " + str(self.routing_number))
         print('Balance:  $'+'{:.2f}'.format(self.balance))
         
 
 
-stanleyAccount = BankAccount('Stanley Chow','83057123', 'A1B1', 5)
-johnAccount = BankAccount('John Doe', '13491124', 'A1B2', 10)
-bobAccount = BankAccount('Bob Johnson', '12345678', 'B5O1', 100)
+stanleyAccount = BankAccount('Stanley Chow')
+johnAccount = BankAccount('John Doe')
+bobAccount = BankAccount('Bob Johnson')
 
 stanleyAccount.deposit(1000)
 stanleyAccount.withdraw(3)
