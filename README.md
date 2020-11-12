@@ -1,2 +1,2 @@
 # BankAccount
- Bank Account assignment for CS 1.1 with Joi Anderson
+This Python program simulates a bank account
